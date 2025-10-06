@@ -186,7 +186,7 @@ python3 fire7.py https://example.com --json > result.json
 
 
 <p align="center">
-  <img src="https://i.postimg.cc/pLVwkH64/tool.jpg" alt="Python Logo" width="120"/>
+  <img src="https://i.postimg.cc/pLVwkH64/tool.jpg" alt="pic" width="800"/>
   &nbsp;&nbsp;&nbsp;
 </p>
 
