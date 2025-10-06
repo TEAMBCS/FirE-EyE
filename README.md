@@ -186,7 +186,7 @@ python3 fire7.py https://example.com --json > result.json
 
 
 <p align="center">
-  <img src="https://i.postimg.cc/tRkj3td9/tool-logo.jpg" alt="pic" width="800"/>
+  <img src="https://i.postimg.cc/K8JfQjqC/tool-info.jpg" alt="pic" width="800"/>
   &nbsp;&nbsp;&nbsp;
 </p>
 
