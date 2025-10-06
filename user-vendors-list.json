@@ -1,0 +1,10 @@
+{
+  "vendors": [
+    "Cloudflare",
+    "Akamai",
+    "Fastly",
+    "AWS CloudFront",
+    "Google Cloud Armor",
+    "Imperva"
+  ]
+}
