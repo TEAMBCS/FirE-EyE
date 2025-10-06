@@ -69,7 +69,6 @@ python3 fire-eye.py <target> [options]
 
 ```bash
 pkg update && pkg install python3 git curl -y
-pip install requests rich pyfiglet colorama
 git clone https://github.com/TEAMBCS/Fire-Eye.git
 cd Fire-Eye
 chmod +x *
