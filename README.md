@@ -10,36 +10,36 @@
 <p align="center">
   A next-generation Firewall, CDN & WAF Fingerprinting Framework for Security Researchers, Bug Hunters, and Penetration Testers.
   <br><br>
-  Built with ❤️ by <b>BLACK ZERO (ADIRTTA)</b>
+  Built with ❤️ by <b>BLACK ZERO </b>
 </p>
-
+<p align="center">
+  🚀 Powered by <b> BANGLADESH CYBER SQUAD and TEAM SHADOW STRIKER </b><br>
+  📆 Year: 2025
+</p>
 ---
 
-## 🛡️ Overview
+<h1 align="center"> Over View </h1>
 
-**FIRE-EYE** (`fire7.py`) is a Python3-based advanced security analysis framework that detects and fingerprints **Web Application Firewalls (WAFs)**, **CDNs**, **Load Balancers**, and related security layers.
+**FIRE-EYE** (`fire-eye.py`) is a Python3-based advanced security analysis framework that detects and fingerprints **Web Application Firewalls (WAFs)**, **CDNs**, **Load Balancers**, and related security layers.
 
 It provides flexible control through user-supplied signatures, regex header matching, and custom request headers — making it suitable for professional pentesters, SOC analysts, and researchers.
 
 ---
 
 ## ⚙️ Core Features
-
+<h1 align="center"> Core Features </h1>
 * 🔍 **WAF / CDN / Load Balancer Detection**
 * 🧩 **User-Supplied Signature Merging** (`--user-list`, `--user-vendors-list`)
 * 🔎 **Regex Header/Cookie/Body Matching** (`--header-search`)
 * ⚙️ **Custom HTTP Headers** (`--headers`)
 * 🧠 **Smart User-Agent Rotation** (disable with `--no-rotate-ua`)
-* 🌐 **GeoIP & SSL Information**
-* 🚫 **Blocked HTTP Method Detection**
-* ⛓️ **Top Open Ports Scanning**
 * 📦 **Automatic Report Generation (.txt / .md)**
 * 💡 **Proxy and JSON Output Support**
 
 ---
 
-## 🧭 Command-Line Usage
-
+#
+<h1 align="center"> Command-Line Usage</h1>
 ```
 python3 fire7.py <target> [options]
 ```
@@ -86,8 +86,7 @@ fire7.py --help
 
 ---
 
-## 🧩 JSON Format Examples
-
+<h1 align="center"> JSON Formet Examples </h1>
 ### 1️⃣ **user-list.json**
 
 ```json
@@ -143,7 +142,9 @@ fire7.py --help
 
 ---
 
-## ⚙️ Usage Examples
+
+<h1 align="center"> Usage Examples </h1>
+
 
 ### 1️⃣ Basic Scan
 
@@ -181,13 +182,18 @@ python3 fire7.py https://example.com --json > result.json
 
 ---
 
-## 🧾 Sample Output Pic
-![pic](https://i.postimg.cc/pLVwkH64/tool.jpg)
+
+
+<h1 align="center"> Sample Output pic </h1>
 
 
 
-The full report is automatically saved as:
+<p align="center">
+  <img src="https://i.postimg.cc/pLVwkH64/tool.jpg" alt="Python Logo" width="120"/>
+  &nbsp;&nbsp;&nbsp;
+</p>
 
+## ⚙️ Auto Report Save as :
 ```
 example_com_fireeye_<timestamp>.txt
 ```
