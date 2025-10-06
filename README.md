@@ -40,8 +40,8 @@ It provides flexible control through user-supplied signatures, regex header matc
 
 #
 <h1 align="center"> Command-Line Usage</h1>
-```
-python3 fire7.py <target> [options]
+```bash 
+python3 fire-eye.py <target> [options]
 ```
 
 ### Example Options:
@@ -72,16 +72,10 @@ pip install requests rich pyfiglet colorama
 
 ```
 
-### 📥 One-Line Installer
-
-```bash
-wget https://raw.githubusercontent.com/ADIRTTA/FIRE-EYE/main/FIRE-EYE.sh -O FIRE-EYE.sh && chmod +x FIRE-EYE.sh && ./FIRE-EYE.sh
-```
-
 After installation, simply run:
 
 ```bash
-fire7.py --help
+python3 fire-eye.py --help
 ```
 
 ---
