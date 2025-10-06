@@ -1,1 +1,263 @@
-# FirE-EyE
+
+
+---
+
+# 🔥 FIRE-EYE — Advanced Firewall & WAF Analyzer
+
+<p align="center">
+  <img src="https://i.postimg.cc/5NkP5QML/Lucid-Realism-Design-a-dark-powerful-hackerstyle-logo-with-the-3.jpg" width="380" alt="FIRE-EYE Logo">
+</p>
+
+<h1 align="center">🔥 FIRE-EYE 🔥</h1>
+<p align="center">
+  A next-generation Firewall, CDN & WAF Fingerprinting Framework for Security Researchers, Bug Hunters, and Penetration Testers.
+  <br><br>
+  Built with ❤️ by <b>BLACK ZERO (ADIRTTA)</b>
+</p>
+
+---
+
+## 🛡️ Overview
+
+**FIRE-EYE** (`fire7.py`) is a Python3-based advanced security analysis framework that detects and fingerprints **Web Application Firewalls (WAFs)**, **CDNs**, **Load Balancers**, and related security layers.
+
+It provides flexible control through user-supplied signatures, regex header matching, and custom request headers — making it suitable for professional pentesters, SOC analysts, and researchers.
+
+---
+
+## ⚙️ Core Features
+
+* 🔍 **WAF / CDN / Load Balancer Detection**
+* 🧩 **User-Supplied Signature Merging** (`--user-list`, `--user-vendors-list`)
+* 🔎 **Regex Header/Cookie/Body Matching** (`--header-search`)
+* ⚙️ **Custom HTTP Headers** (`--headers`)
+* 🧠 **Smart User-Agent Rotation** (disable with `--no-rotate-ua`)
+* 🌐 **GeoIP & SSL Information**
+* 🚫 **Blocked HTTP Method Detection**
+* ⛓️ **Top Open Ports Scanning**
+* 📦 **Automatic Report Generation (.txt / .md)**
+* 💡 **Proxy and JSON Output Support**
+
+---
+
+## 🧭 Command-Line Usage
+
+```
+python3 fire7.py <target> [options]
+```
+
+### Example Options:
+
+| Option                          | Description                                              |
+| ------------------------------- | -------------------------------------------------------- |
+| `target`                        | Target domain or URL (e.g., `https://example.com`)       |
+| `--headers "Key:Val;Key2:Val2"` | Send custom request headers                              |
+| `--header-search "<regex>"`     | Search for evidence in headers, cookies, or body         |
+| `--user-list <file>`            | Custom WAF/CDN/token signature list (JSON/simple format) |
+| `--user-vendors-list <file>`    | Custom vendor list to merge with default                 |
+| `--proxy <file>`                | File containing proxies (HTTP/SOCKS)                     |
+| `--show-headers`                | Displays raw HTTP headers via `curl`                     |
+| `--no-rotate-ua`                | Disable User-Agent rotation                              |
+| `--report <path>`               | Save the output report to a custom file                  |
+| `--json`                        | Output in JSON format                                    |
+| `--debug`                       | Enable debug logging                                     |
+
+---
+
+## 💻 Installation
+
+### 📲 Termux / Linux
+
+```bash
+pkg update && pkg install python git curl -y
+pip install requests rich pyfiglet colorama
+git clone https://github.com/ADIRTTA/FIRE-EYE.git
+cd FIRE-EYE
+chmod +x fire7.py
+python3 fire7.py
+```
+
+### 📥 One-Line Installer
+
+```bash
+wget https://raw.githubusercontent.com/ADIRTTA/FIRE-EYE/main/FIRE-EYE.sh -O FIRE-EYE.sh && chmod +x FIRE-EYE.sh && ./FIRE-EYE.sh
+```
+
+After installation, simply run:
+
+```bash
+fire7.py --help
+```
+
+---
+
+## 🧩 JSON Format Examples
+
+### 1️⃣ **user-list.json**
+
+```json
+{
+  "MyCustomWAF": {
+    "manufacturer": "MyCompany",
+    "type": "WAF",
+    "headers": ["x-mycompany-id", "mycompany-waf"],
+    "cookies": ["MYCOMP_SESSION"],
+    "body": ["Access denied by MyCompany WAF"],
+    "server": ["mycompany"]
+  }
+}
+```
+
+### 2️⃣ **user-vendors-list.json**
+
+```json
+{
+  "vendors": [
+    "Cloudflare",
+    "Akamai",
+    "Fastly",
+    "AWS CloudFront",
+    "Imperva"
+  ]
+}
+```
+
+---
+
+## 🔧 How `--headers` and `--header-search` Work
+
+* **`--headers`**
+  Format: `"Key:Val;Key2:Val2"`
+  Example:
+
+  ```bash
+  --headers "User-Agent:Mozilla/5.0;Referer:https://google.com;Accept:*/*"
+  ```
+
+  ➤ The tool parses and attaches these headers to all requests.
+
+* **`--header-search`**
+  Searches inside headers, cookies, and response body for specific patterns using regex.
+  Example:
+
+  ```bash
+  --header-search "(?i)cf-ray|x-amz-cf-id|incap_ses"
+  ```
+
+  ➤ Matches are displayed and logged in the report.
+
+---
+
+## ⚙️ Usage Examples
+
+### 1️⃣ Basic Scan
+
+```bash
+python3 fire7.py https://example.com
+```
+
+### 2️⃣ With Custom Headers and Regex Search
+
+```bash
+python3 fire7.py https://example.com \
+  --headers "User-Agent:MyCustomAgent;Referer:https://google.com" \
+  --header-search "(?i)cf-ray|x-amz-cf-id|fastly"
+```
+
+### 3️⃣ With Custom Signature Lists
+
+```bash
+python3 fire7.py https://target.com \
+  --user-list user-list.json \
+  --user-vendors-list user-vendors-list.json
+```
+
+### 4️⃣ With Proxy Support
+
+```bash
+python3 fire7.py https://example.com --proxy proxy.txt --debug
+```
+
+### 5️⃣ JSON Output Mode
+
+```bash
+python3 fire7.py https://example.com --json > result.json
+```
+
+---
+
+## 🧾 Sample Output
+
+```text
+🔥 FIRE-EYE 🔥 Firewall & WAF Analyzer
+
+🎯 Target: https://example.com
+🌍 Location: Dhaka, Bangladesh
+🏢 ISP: Grameenphone Ltd.
+
+🛡️ Firewall Detected: ✅
+📦 Type: Cloudflare
+🔐 WAF: Yes
+⚙️ Strictness: High
+⚔️ Strength: 87%
+
+🚫 Blocked Methods: POST, PUT
+📡 SSL: Valid (Let's Encrypt)
+🔐 Security Headers: x-frame-options, content-security-policy
+⛓️ Open Ports: 80, 443, 8080
+
+🧠 Bypass Possible: ❌ (Highly Protected)
+```
+
+The full report is automatically saved as:
+
+```
+example_com_fireeye_<timestamp>.txt
+```
+
+---
+
+## 🧰 Dependencies
+
+| Library    | Purpose                |
+| ---------- | ---------------------- |
+| `requests` | HTTP requests          |
+| `rich`     | Console styling        |
+| `pyfiglet` | ASCII banners          |
+| `colorama` | Terminal color support |
+
+Install manually:
+
+```bash
+pip install requests rich pyfiglet colorama
+```
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is **for educational and authorized security testing only.**
+Do **not** use it against any system or domain without proper permission.
+
+Unauthorized scanning may violate laws or regulations.
+
+---
+
+## 👨‍💻 Author
+
+* **Adi Barua (ADIRTTA)** — *BLACK ZERO*
+* 🌐 GitHub: [github.com/ADIRTTA](https://github.com/ADIRTTA)
+* 📱 Facebook: [facebook.com/ADIRTTA](https://facebook.com/ADIRTTA)
+* ⚡ Team: **TEAM BCS**
+
+---
+
+## 📜 License
+
+**MIT License**
+Use responsibly and only for ethical security research.
+
+---
+
+Would you like me to generate this as a ready-to-download `README.md` file (with proper formatting and markdown styling)?
+I can prepare and send it directly to you.
