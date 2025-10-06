@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="https://i.postimg.cc/5NkP5QML/Lucid-Realism-Design-a-dark-powerful-hackerstyle-logo-with-the-3.jpg" width="380" alt="FIRE-EYE Logo">
+  <img src="https://i.postimg.cc/RhQQHY5q/Tool-logo.jpg" width="380" alt="FIRE-EYE Logo">
 </p>
 
 <h1 align="center">🔥 FIRE-EYE 🔥</h1>
@@ -66,8 +66,11 @@ python3 fire-eye.py <target> [options]
 ### 📲 Termux / Linux
 
 ```bash
-pkg update && pkg install python git curl -y
+pkg update && pkg install python3 git curl -y
 pip install requests rich pyfiglet colorama
+git clone https://github.com/TEAMBCS/FirE-EyE.git
+
+
 
 ```
 
