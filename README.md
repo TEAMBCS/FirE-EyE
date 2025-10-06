@@ -1,7 +1,5 @@
 
 
-# 🔥 FIRE-EYE — Advanced Firewall & WAF Analyzer
-
 <p align="center">
   <img src="https://i.postimg.cc/5NkP5QML/Lucid-Realism-Design-a-dark-powerful-hackerstyle-logo-with-the-3.jpg" width="380" alt="FIRE-EYE Logo">
 </p>
