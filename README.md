@@ -1,7 +1,5 @@
 
 
----
-
 # 🔥 FIRE-EYE — Advanced Firewall & WAF Analyzer
 
 <p align="center">
@@ -71,10 +69,7 @@ python3 fire7.py <target> [options]
 ```bash
 pkg update && pkg install python git curl -y
 pip install requests rich pyfiglet colorama
-git clone https://github.com/ADIRTTA/FIRE-EYE.git
-cd FIRE-EYE
-chmod +x fire7.py
-python3 fire7.py
+
 ```
 
 ### 📥 One-Line Installer
@@ -186,28 +181,10 @@ python3 fire7.py https://example.com --json > result.json
 
 ---
 
-## 🧾 Sample Output
+## 🧾 Sample Output Pic
+![pic](https://i.postimg.cc/pLVwkH64/tool.jpg)
 
-```text
-🔥 FIRE-EYE 🔥 Firewall & WAF Analyzer
 
-🎯 Target: https://example.com
-🌍 Location: Dhaka, Bangladesh
-🏢 ISP: Grameenphone Ltd.
-
-🛡️ Firewall Detected: ✅
-📦 Type: Cloudflare
-🔐 WAF: Yes
-⚙️ Strictness: High
-⚔️ Strength: 87%
-
-🚫 Blocked Methods: POST, PUT
-📡 SSL: Valid (Let's Encrypt)
-🔐 Security Headers: x-frame-options, content-security-policy
-⛓️ Open Ports: 80, 443, 8080
-
-🧠 Bypass Possible: ❌ (Highly Protected)
-```
 
 The full report is automatically saved as:
 
@@ -246,8 +223,8 @@ Unauthorized scanning may violate laws or regulations.
 ## 👨‍💻 Author
 
 * **Adi Barua (ADIRTTA)** — *BLACK ZERO*
-* 🌐 GitHub: [github.com/ADIRTTA](https://github.com/ADIRTTA)
-* 📱 Facebook: [facebook.com/ADIRTTA](https://facebook.com/ADIRTTA)
+* 🌐 GitHub: [github.com/TEAM-BCS](https://github.com/TEAM-BCS)
+* 📱 Facebook: [facebook.com/BANGLADESH-CYBER-SQUAD](https://facebook.com/groups/572787103428508/)
 * ⚡ Team: **TEAM BCS**
 
 ---
@@ -259,5 +236,3 @@ Use responsibly and only for ethical security research.
 
 ---
 
-Would you like me to generate this as a ready-to-download `README.md` file (with proper formatting and markdown styling)?
-I can prepare and send it directly to you.
