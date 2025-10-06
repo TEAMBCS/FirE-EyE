@@ -26,7 +26,7 @@ It provides flexible control through user-supplied signatures, regex header matc
 
 ---
 
-## ⚙️ Core Features
+
 <h1 align="center"> Core Features </h1>
 * 🔍 **WAF / CDN / Load Balancer Detection**
 * 🧩 **User-Supplied Signature Merging** (`--user-list`, `--user-vendors-list`)
