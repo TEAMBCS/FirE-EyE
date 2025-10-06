@@ -37,8 +37,9 @@ It provides flexible control through user-supplied signatures, regex header matc
 
 ---
 
-#
+
 <h1 align="center"> Command-Line Usage</h1>
+
 ```bash 
 python3 fire-eye.py <target> [options]
 ```
@@ -61,7 +62,8 @@ python3 fire-eye.py <target> [options]
 
 ---
 
-## 💻 Installation
+
+<h1 align="center"> Installation</h1>
 
 ### 📲 Termux / Linux
 
