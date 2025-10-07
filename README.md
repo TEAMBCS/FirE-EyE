@@ -147,13 +147,13 @@ python3 fire-eye.py --help
 ### 1️⃣ Basic Scan
 
 ```bash
-python3 fire7.py https://example.com
+python3 fire-eye.py https://example.com
 ```
 
 ### 2️⃣ With Custom Headers and Regex Search
 
 ```bash
-python3 fire7.py https://example.com \
+python3 fire-eye.py https://example.com \
   --headers "User-Agent:MyCustomAgent;Referer:https://google.com" \
   --header-search "(?i)cf-ray|x-amz-cf-id|fastly"
 ```
@@ -161,7 +161,7 @@ python3 fire7.py https://example.com \
 ### 3️⃣ With Custom Signature Lists
 
 ```bash
-python3 fire7.py https://target.com \
+python3 fire-eye.py https://target.com \
   --user-list user-list.json \
   --user-vendors-list user-vendors-list.json
 ```
@@ -169,15 +169,18 @@ python3 fire7.py https://target.com \
 ### 4️⃣ With Proxy Support
 
 ```bash
-python3 fire7.py https://example.com --proxy proxy.txt --debug
+python3 fire-eye.py https://example.com --proxy proxy.txt --debug
 ```
 
 ### 5️⃣ JSON Output Mode
 
 ```bash
-python3 fire7.py https://example.com --json > result.json
+python3 fire-eye.py https://example.com --json > result.json
 ```
-
+### 6️⃣ REPORT Save Mode
+```bash
+python3 fire-eye.py https://example.com --report fire-eye.txt
+```
 ---
 
 
